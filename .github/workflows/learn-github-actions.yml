@@ -15,7 +15,7 @@ jobs:
       - run: ls -la
       - run: php -v
   my_first_docker_job:
-    runs: docker
+    runs-on: docker
     steps:
       - name: My first step
         uses: docker://alpine:3.8
