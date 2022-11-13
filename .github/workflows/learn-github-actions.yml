@@ -2,7 +2,7 @@ name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  check-bats-version:
+  php-playground:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,3 +14,8 @@ jobs:
       - run: echo $PWD
       - run: ls -la
       - run: php -v
+  my_first_docker_job:
+    steps:
+      - name: My first step
+        uses: docker://alpine:3.8
+
