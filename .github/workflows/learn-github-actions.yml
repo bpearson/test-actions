@@ -6,8 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Setup PHP with PECL extension
+        uses: shivammathur/setup-php@v2
         with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+          php-version: '7.3'
+          extensions: ast
+      - run: echo $PWD
+      - run: ls -la
+      - run: php -v
