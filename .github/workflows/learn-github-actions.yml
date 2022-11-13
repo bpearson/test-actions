@@ -14,9 +14,3 @@ jobs:
       - run: echo $PWD
       - run: ls -la
       - run: php -v
-  my_first_docker_job:
-    runs-on: docker
-    steps:
-      - name: My first step
-        uses: docker://alpine:3.8
-
